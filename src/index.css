@@ -1,0 +1,462 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --darkBlue : #0039a6;
+  --btnPrimaryColor: #007FFF;
+}
+
+/*
+  phone: 576px;
+  tablet: 768px;
+  laptop: 992px;
+  largedevice: 1200px;
+*/
+
+.layout {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../public/images/background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.linear {
+  background: linear-gradient(rgba(0, 0, 155, 0.75), rgba(0, 0, 200, 0.5));
+  box-shadow: inset 0 5px 0 5px rgba(0, 0, 100, 0.2); 
+  border: 2px solid #002D62;
+}
+
+.btn-primary {
+  width: 12rem;
+  height: 5rem;
+  border: none;
+  background-color: var(--btnPrimaryColor);
+  color: #FFFFFF;
+  border-top: 1px solid var(--darkBlue);
+  border-right: 2px solid var(--darkBlue);
+  border-left: 2px solid var(--darkBlue);
+  border-bottom: 3px solid var(--darkBlue);
+  margin-left: 5px;
+  box-shadow: inset 0 2px 0 2px #87a4f0;
+  /* box-shadow: h-offset v-offset blur spread colour */
+  border-radius: 50px;
+  transition: 1s;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+.btn-primary:hover {
+  background-color: #87a4f0;
+  /*box-shadow: inset 0 2px 0px 2px var(--btnPrimaryColor);*/
+}
+@media only screen and (max-width: 576px) {
+  .btn-primary {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+}
+
+.back-icon {
+  height: 4rem;
+  width: 4rem;
+  background-color: #00356B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 0 3px #0C2340;
+}
+@media only screen and (max-width: 576px) {
+  .back-icon {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+  }
+}
+
+.menu {
+  height: 50%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1.75rem;
+}
+@media only screen and (min-width: 576px) {
+  .menu {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .menu {
+    width: 50%;
+  }
+}
+
+
+/************* HOME *************/
+.home-title {
+  font-weight: 800;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow: 5px 5px #000000;
+}
+@media only screen and (min-width: 576px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .home-title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-title {
+    font-size: 3.5rem;
+  }
+}
+
+
+/************* CATEGORIES *************/
+.categories-header {
+  height: 10%rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.categories-title {
+  font-size: 2.25rem;
+  font-weight: 1000;
+  background: -webkit-linear-gradient(#757272, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.categories-menu {
+  width: 90%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 2.25rem;
+}
+.category-btn {
+  width: 75%;
+  border: 1px solid var(--darkBlue);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media only screen and (min-width: 576px) {
+  .categories-title {
+    font-size: 2.75rem;
+  }
+  .categories-menu {
+    height: 50%;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .category-btn {
+    height: 30%;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .categories-title {
+    font-size: 3rem;
+  }
+  .categories-menu {
+    width: 60%;
+  }
+  .category-btn {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .categories-title {
+    font-size: 3.5rem;
+  }
+  .categories-menu {
+    width: 50%;
+  }
+  .category-btn {
+    font-size: 2rem;
+  }
+}
+
+/************* PLAYBOARD *************/
+header {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Josefin Sans", sans-serif;
+  align-items: center;
+  padding: 1.25rem 0;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 576px) {
+  header {
+      flex-direction: row;
+      padding: 3rem 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header {
+      font-size: 3rem;
+      padding: 3.5rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+      font-size: 4rem;
+  }
+}
+
+.playboard-modal {
+  z-index: 1;
+  background: linear-gradient(rgb(0, 0, 155, 0.9), rgba(0, 0, 200, 0.75));
+  text-align: center;
+}
+.playboard-modal h1 {
+  font-weight: 1000;
+  font-size: 2.75rem;
+}
+.playboard-modal h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+/************* PROGRESSBAR *************/
+.progressbar-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 576px) {
+  .progressbar-container {
+      width: 35%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .progressbar-container {
+      width: 25rem;
+  }
+}
+
+.progressbar-outer {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+.progressbar-inner {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 95%;
+  border-radius: 20px;
+  transition: width 0.5s ease-out;
+}
+.progressbar-fill {
+  height: 100%;
+  background-color: darkblue;
+  border-radius: 20px;
+}
+
+
+/************* WORD *************/
+
+.word-container {
+  position: relative;
+  height: 30%;
+  font-family: "Protest Riot", sans-serif;
+  padding: 5px 0;
+}
+@media only screen and (min-width: 576px) {
+  .word-container {
+      padding: 20px 0;
+  }
+}
+
+.word {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+@media only screen and (min-width: 576px) {
+  .word {
+      width: 90%;
+      gap: 0.75rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .word {
+      width: 50%;
+      gap: 0.75rem;
+  }
+}
+
+.word-letter{
+  height: 3rem;
+  width: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkblue;
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 576px) {
+  .word-letter {
+      height: 3.75rem;
+      font-size: 1.75rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .word-letter {
+      height: 5rem;
+      border-radius: 1.25rem;
+      font-size: 3rem;
+  }
+}
+
+
+.spacebar {
+  height: 3rem;
+  width: 6%;
+}
+
+.word .unguessed {
+  opacity: 0.5;
+}
+
+.line-break {
+  width: 100%;
+  height: 0;
+}
+
+/************* KEYBOARD *************/
+.keyboard-container {
+  position: relative;
+  height: 20rem;
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 500;
+  overflow-x: none;
+}
+
+.keyboard {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  lefT: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-gap: 1.25%;
+  grid-row-gap: 0.5rem;
+}
+@media only screen and (min-width: 576px) {
+  .keyboard {
+      width: 80%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .keyboard {
+      width: 60%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .keyboard {
+      width: 60%;
+  }
+}
+
+.keyboard-letter {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 139);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 576px) {
+  .keyboard-letter {
+      height: 3rem;
+      font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .keyboard-letter {
+      height: 3.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .keyboard-letter {
+    height: 4rem;
+    border-radius: 1rem;
+  }
+}
+
+
+.keyboard .unguessed {
+  cursor: pointer;
+}
+
+.keyboard .guessed {
+  opacity: 0.5;
+}
